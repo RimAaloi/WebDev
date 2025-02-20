@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <script>
+    // exercice 1
+    var a = prompt("Une température en Fahrenheit ");
+    alert("Une température en Fahrenheit "+a)
+    var b = (5/9)*(a-32);
+    alert("cette température équivaut a  "+b)
+
+
+    //exercice 2
+   
+    function hjms(secondes){
+    const jours = Math.floor(secondes / (24 * 60 * 60));
+    secondes %= 24 * 60 * 60;
+
+    const heures = Math.floor(secondes / (60 * 60));
+    secondes %= 60 * 60;
+
+    const minutes = Math.floor(secondes / 60);
+    secondes %= 60;
+
+    const sec = secondes;
+
+    return `${jours} jours ${heures} heures ${minutes} minutes ${sec} secondes`;
+    }
+    var secondes=prompt("donner moi duree en sconde")
+    var i = hjms(secondes);
+    alert("cette durée équivaut à"+i)
+
+   //exercice 3
+
+    var k=prompt("donner moi le premier nombre");
+    var j=prompt("donner moi le deuxieme nombre");
+    var l=prompt("donner moi le troixieme nombre");
+
+    function troisNombres(k, j, l) {
+    if(k>j && k>l){
+        if (j>l){
+            return k ,j,l;
+        }
+    }
+    if(k>j && k>l){
+        if (l>j){
+            return k ,l,j;
+        }
+    }
+    if(j>k && j>l){
+        if (k>l){
+            return j ,k,l;
+        }
+    }
+    if(j>k && j>l){
+        if (k>l){
+            return j ,k,l;
+        }
+    }
+    const nombres = [k, j, l];
+
+    nombres.sort((x, y) => x - y);
+
+    return nombres.join(' ');
+    }
+
+
+alert("les nombres dans l'ordre croissant :"+troisNombres(k, j, l));
+ 
+//exercice 4
+
+var taille=prompt("Un motif de taille=")
+
+= function triangle1(taille) {
+    let i = 1;
+    while (i <= taille) {
+        let j = 1;
+        let ligne = "";
+        while (j <= i) {
+            ligne += "*";
+            j++;
+        }
+        console.log("affichage par whilw",ligne);
+        i++;
+    }
+}
+
+alert("affichage par whilw")
+var taille=prompt("Un motif de taille=")
+function triangle2(taille) {
+    for (let i = 1; i <= taille; i++) {
+        let ligne = "";
+        for (let j = 1; j <= i; j++) {
+            ligne += "*";
+        }
+        console.log("affichage par pour",ligne);
+    }
+}
+
+//exercice 5
+
+
+ </script>
+</body>
+</html>
