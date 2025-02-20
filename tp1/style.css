@@ -1,0 +1,43 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 740px;
+    height: 600px;
+    border-collapse: collapse;
+    margin: 50px auto;
+    background-color: white;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.menu {
+    width: 20%;
+    background-color: #f0f0f0;
+}
+
+.content {
+    width: 60%;
+}
+
+.footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
