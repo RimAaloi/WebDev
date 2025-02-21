@@ -3,108 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercices JavaScript</title>
 </head>
 <body>
+    <script>
+        // Exercice 1 : Conversion de températures
+        (function exercice1() {
+            const tempF = parseFloat(prompt("Une température en Fahrenheit :"));
+            const tempC = (5 / 9) * (tempF - 32);
+            alert(`Cette température équivaut à ${tempC.toFixed(1)} degrés Celsius`);
+        })();
 
- <script>
-    // exercice 1
-    var a = prompt("Une température en Fahrenheit ");
-    alert("Une température en Fahrenheit "+a)
-    var b = (5/9)*(a-32);
-    alert("cette température équivaut a  "+b)
+        // Exercice 2 : Conversion de durées
+        (function exercice2() {
+            const secondes = parseInt(prompt("Donnez une durée en secondes :"));
+            const jours = Math.floor(secondes / 86400);
+            const heures = Math.floor((secondes % 86400) / 3600);
+            const minutes = Math.floor((secondes % 3600) / 60);
+            const sec = secondes % 60;
+            alert(`Cette durée équivaut à ${jours} jours ${heures} heures ${minutes} minutes ${sec} secondes`);
+        })();
 
+        // Exercice 3 : Classer 3 nombres
+        (function exercice3() {
+            const k = parseFloat(prompt("Donnez le premier nombre :"));
+            const j = parseFloat(prompt("Donnez le deuxième nombre :"));
+            const l = parseFloat(prompt("Donnez le troisième nombre :"));
+            const nombres = [k, j, l].sort((a, b) => a - b);
+            alert(`Les nombres dans l'ordre croissant : ${nombres.join(', ')}`);
+        })();
 
-    //exercice 2
-   
-    function hjms(secondes){
-    const jours = Math.floor(secondes / (24 * 60 * 60));
-    secondes %= 24 * 60 * 60;
+        // Exercice 4 : Affichage de motifs - escaliers
+        (function exercice4() {
+            const taille = parseInt(prompt("Un motif de taille = "));
 
-    const heures = Math.floor(secondes / (60 * 60));
-    secondes %= 60 * 60;
+            // Fonction avec while
+            function triangle1(taille) {
+                let i = 1;
+                let result = "";
+                while (i <= taille) {
+                    result += "*".repeat(i) + "\n";
+                    i++;
+                }
+                return result;
+            }
+            
+            (function exercice4Bis() {
+    const taille = parseInt(prompt("Donnez la taille de la pyramide :"));
 
-    const minutes = Math.floor(secondes / 60);
-    secondes %= 60;
-
-    const sec = secondes;
-
-    return `${jours} jours ${heures} heures ${minutes} minutes ${sec} secondes`;
-    }
-    var secondes=prompt("donner moi duree en sconde")
-    var i = hjms(secondes);
-    alert("cette durée équivaut à"+i)
-
-   //exercice 3
-
-    var k=prompt("donner moi le premier nombre");
-    var j=prompt("donner moi le deuxieme nombre");
-    var l=prompt("donner moi le troixieme nombre");
-
-    function troisNombres(k, j, l) {
-    if(k>j && k>l){
-        if (j>l){
-            return k ,j,l;
+    function pyramide(taille) {
+        let result = "";
+        for (let i = 1; i <= taille; i++) {
+            // Ajouter des espaces pour centrer la pyramide
+            result += " ".repeat(taille - i);
+            // Ajouter les étoiles
+            result += "*".repeat(2 * i - 1);
+            // Passer à la ligne suivante
+            result += "\n";
         }
-    }
-    if(k>j && k>l){
-        if (l>j){
-            return k ,l,j;
-        }
-    }
-    if(j>k && j>l){
-        if (k>l){
-            return j ,k,l;
-        }
-    }
-    if(j>k && j>l){
-        if (k>l){
-            return j ,k,l;
-        }
-    }
-    const nombres = [k, j, l];
-
-    nombres.sort((x, y) => x - y);
-
-    return nombres.join(' ');
+        return result;
     }
 
+    alert("Affichage de la pyramide :\n" + pyramide(taille));
+})();
 
-alert("les nombres dans l'ordre croissant :"+troisNombres(k, j, l));
- 
-//exercice 4
+            // Fonction avec for
+            function triangle2(taille) {
+                let result = "";
+                for (let i = 1; i <= taille; i++) {
+                    result += "*".repeat(i) + "\n";
+                }
+                return result;
+            }
 
-var taille=prompt("Un motif de taille=")
+            alert("Affichage par while :\n" + triangle1(taille));
+            alert("Affichage par for :\n" + triangle2(taille));
+        })();
 
-= function triangle1(taille) {
-    let i = 1;
-    while (i <= taille) {
-        let j = 1;
-        let ligne = "";
-        while (j <= i) {
-            ligne += "*";
-            j++;
-        }
-        console.log("affichage par whilw",ligne);
-        i++;
-    }
-}
+        // Exercice 5 : Tester si un nombre est premier
+        (function exercice5() {
+            const nombre = parseInt(prompt("Un entier positif :"));
 
-alert("affichage par whilw")
-var taille=prompt("Un motif de taille=")
-function triangle2(taille) {
-    for (let i = 1; i <= taille; i++) {
-        let ligne = "";
-        for (let j = 1; j <= i; j++) {
-            ligne += "*";
-        }
-        console.log("affichage par pour",ligne);
-    }
-}
+            function estPremier(n) {
+                if (n <= 1) return false;
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) return false;
+                }
+                return true;
+            }
 
-//exercice 5
+            if (estPremier(nombre)) {
+                alert(`${nombre} est un nombre premier`);
+            } else {
+                alert(`${nombre} n'est pas un nombre premier`);
+            }
+        })();
 
+        // Exercice 6 : Suite de Fibonacci
+        (function exercice6() {
+            const choix = prompt("Choisissez une option :\n1. Calculer le n-ième terme\n2. Trouver le premier terme supérieur à une valeur");
 
- </script>
+            if (choix === "1") {
+                const n = parseInt(prompt("Entrez la valeur de n pour le n-ième terme de Fibonacci :"));
+                function fibonacci(n) {
+                    let a = 0, b = 1;
+                    for (let i = 2; i <= n; i++) {
+                        [a, b] = [b, a + b];
+                    }
+                    return b;
+                }
+                alert(`Le ${n}-ième terme de Fibonacci est ${fibonacci(n)}`);
+            } else if (choix === "2") {
+                const valeur = parseFloat(prompt("Entrez une valeur pour trouver le premier terme de Fibonacci supérieur à cette valeur :"));
+                function premierTermeSuperieur(valeur) {
+                    let a = 0, b = 1, rang = 1;
+                    while (b <= valeur) {
+                        [a, b] = [b, a + b];
+                        rang++;
+                    }
+                    return { terme: b, rang: rang };
+                }
+                const result = premierTermeSuperieur(valeur);
+                alert(`Le premier terme supérieur à ${valeur} est ${result.terme} (rang ${result.rang})`);
+            } else {
+                alert("Option invalide");
+            }
+        })();
+
+        // Exercice 7 : Valeur approchée de la racine carrée
+        (function exercice7() {
+            const A = parseFloat(prompt("Entrez un nombre A pour calculer sa racine carrée :"));
+
+            function racineCarree(A) {
+                let u0 = A / 2;
+                let un = u0;
+                do {
+                    u0 = un;
+                    un = 0.5 * (u0 + A / u0);
+                } while (Math.abs(un - u0) >= 1e-5);
+                return un;
+            }
+
+            alert(`Valeur approchée de la racine carrée de ${A} = ${racineCarree(A)}`);
+        })();
+    </script>
 </body>
 </html>
