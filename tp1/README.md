@@ -1,78 +1,52 @@
-TP1: Creating an HTML Website with Table-Based Layout
+# TP1 📂 : Creating an HTML Website with Table-Based Layout
 
-📌 Description
+## 📌 Description
+This project is an exercise in creating a **website using HTML**, utilizing **tables** to organize the layout. The site consists of **four main pages** and a template file (gabari.html) to ensure a uniform structure.  
 
-This project is an exercise in creating a website using HTML, utilizing tables to organize the layout. The site consists of four main pages and a template file (gabari.html) to ensure a uniform structure.
+## 📄 Website Pages
+1. **Index.html**: Home page  
+2. **Petit-dejeuner.html**: Page describing breakfast  
+3. **Dejeuner.html**: Page describing lunch  
+4. **Diner.html**: Page describing dinner  
 
-📄 Website Pages
+Each page is built using the gabari.html template, which includes:  
+✅ A logo  
+✅ A left-side navigation menu  
+✅ A top banner  
+✅ A central content area  
+✅ A footer  
 
-Index.html: Home page
+---
 
-Petit-dejeuner.html: Page describing breakfast
+### 🏠 **Home Page **
+![Home](screenshots/gabarit.png)  
+🔎 The home page displays a menu on the left and a banner at the top. The main content is centered.  
 
-Dejeuner.html: Page describing lunch
+### 🍞 **Breakfast Page (petit-dejeuner.html)**
+![Breakfast](screenshots/Petit-dejeuner.png)  
+🔎 This page describes breakfast elements with a similar layout.  
 
-Diner.html: Page describing dinner
+### 🍽️ **Lunch Page (dejeuner.html)**
+![Lunch](screenshots/Dejeuner.png)  
+🔎 The Lunch page presents different meal options with text .  
 
-Each page is built using the gabari.html template, which includes:✅ A logo✅ A left-side navigation menu✅ A top banner✅ A central content area✅ A footer
+### 🌙 **Dinner Page (diner.html)**
+![Dinner](screenshots/Diner.png)  
+🔎 This page is dedicated to the evening meal, with details and illustrations.  
 
-📂 Project Structure
+---
 
-/tp1-site-html
-│── index.html
-│── petit-dejeuner.html
-│── dejeuner.html
-│── diner.html
-│── gabari.html
-│── style.css (if applicable)
-│── images/ (if applicable)
-│── screenshots/ (for screenshots)
-│── README.md
+## 🛠️ Technologies Used
+- **HTML**: Website structure  
+- **Git/GitHub**: Version control  
 
-🚀 Usage Instructions
+---
 
-Clone the project
+## 💌 Author
+👩‍💻 RIM AALOI  
+💌 Contact: aaloirim@gmail.com 
 
-git clone <your_GitHub_repo_link>
+---
 
-Open the index.html file in a web browser
-
-Navigate between pages
-
-Modify and customize content if needed
-
-📸 Screenshots
-
-Here are some screenshots to illustrate the website:
-
-🏠 Home Page (index.html)
-
-🔎 The home page displays a menu on the left and a banner at the top. The main content is centered.
-
-🍞 Breakfast Page (petit-dejeuner.html)
-
-🔎 This page describes breakfast elements with a similar layout.
-
-🍽️ Lunch Page (dejeuner.html)
-
-🔎 The Lunch page presents different meal options with text and images.
-
-🌙 Dinner Page (diner.html)
-
-🔎 This page is dedicated to the evening meal, with details and illustrations.
-
-🛠️ Technologies Used
-
-HTML: Website structure
-
-CSS (if applicable): Styling
-
-Git/GitHub: Version control
-
-💌 Author
-
-👩‍💻 [Your Name]💌 Contact: [Your Email or GitHub Profile]
-
-📢 Notes
-
-🔹 The site is optimized for a 800x600 pixel resolution with a width of 740 pixels.🔹 You can modify style.css to customize the appearance.🔹 Screenshots are stored in the screenshots/ folder.
+## 📢 Notes
+🔹 The site is optimized for a **800x600 pixel resolution** with a width of **740 pixels**.  
