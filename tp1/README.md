@@ -4,7 +4,7 @@
 This project is an exercise in creating a **website using HTML**, utilizing **tables** to organize the layout. The site consists of **four main pages** and a template file (gabari.html) to ensure a uniform structure.  
 
 ## 📄 Website Pages
-1. **Index.html**: Home page  
+1. **gabarit.html**: Home page  
 2. **Petit-dejeuner.html**: Page describing breakfast  
 3. **Dejeuner.html**: Page describing lunch  
 4. **Diner.html**: Page describing dinner  
