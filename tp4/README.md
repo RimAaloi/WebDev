@@ -1,52 +1,60 @@
 # 📂 Web Development Exercises
 
-This repository contains a series of web development exercises completed as part of a learning module. The exercises cover various aspects of web development, including **HTML**, **CSS**, and **JavaScript**.
+This project is a web-based application that includes four interactive tools: a **simple calculator** for basic arithmetic operations, a **value swapper**, a **BMI calculator**, and a **scientific calculator** with advanced functions like square root, trigonometry, and logarithms. 
 
 ---
 
-## 🚀 Repository Structure
-The repository is organized into folders corresponding to each exercise or project:
-- **tp3**: Exercises from TP3, including an HTML page, a CSS file, and a JavaScript file.
-- **tp4**: Exercises from TP4, with additional files to explore advanced concepts.
+## 🛠️ Tools Included
+
+1. **Simple Calculator**: Performs basic arithmetic operations (addition, subtraction, multiplication, division).
+2. **Value Swapper**: Swaps the values of two input fields.
+3. **BMI Calculator**: Calculates Body Mass Index (BMI) and provides an interpretation of the result.
+4. **Scientific Calculator**: Supports advanced functions like square root, trigonometry (sin, cos, tan), logarithms, and exponentiation.
 
 ---
 
-## 🛠️ Technologies Used
-- **HTML**: For structuring web pages.
+## 🚀 Features
+- **Interactive Design**: Each tool is user-friendly and responsive.
+- **Dynamic Results**: Results are displayed in real-time using JavaScript.
+- **Clean UI**: Styled with CSS for a modern and intuitive interface.
+
+---
+
+## 💻 Technologies Used
+- **HTML**: For structuring the web pages.
 - **CSS**: For styling and layout.
-- **JavaScript**: For interactivity and client-side logic.
-
----
-
-## 📝 Exercise Content
-
-### 📄 **TP3 - Introduction to HTML and CSS**
-- **index.html**: A simple HTML page with a basic structure.
-- **style.css**: A CSS file to style the page.
-- **script.js**: A JavaScript file to add interactive features.
-
-### 📄 **TP4 - Advanced Concepts**
-- **index.html**: An HTML page with more complex elements.
-- **style.css**: A CSS file for advanced styling.
-- **script.js**: A JavaScript file for dynamic interactions.
+- **JavaScript**: For interactivity and dynamic functionality.
 
 ---
 
 ## 📸 Screenshots
-Here are some screenshots of the exercises:
 
-### 🖼️ **TP3 - Homepage**
-![TP3 - Homepage](screenshots/tp3_homepage.png)  
-*Caption: The homepage from TP3 with a simple layout.*
+### 🖼️ **Simple Calculator**
+![Simple Calculator](screenshots/calculator.png)  
+*Basic arithmetic operations.*
 
-### 🖼️ **TP4 - Interactive Page**
-![TP4 - Interactive Page](screenshots/tp4_interactive.png)  
-*Caption: The interactive page from TP4 with dynamic elements.*
+### 🖼️ **Value Swapper**
+![Value Swapper](screenshots/swapper.png)  
+*Swaps values between two input fields.*
+
+### 🖼️ **BMI Calculator**
+![BMI Calculator](screenshots/bmi.png)  
+*Calculates BMI and provides health interpretation.*
+
+### 🖼️ **Scientific Calculator**
+![Scientific Calculator](screenshots/scientific.png)  
+*Supports advanced mathematical functions.*
+
+---
+## 🛠️ How to Use
+1. Clone the repository or download the files.
+2. Open `index.html` in your browser.
+3. Interact with the tools to perform calculations, swap values, or compute BMI.
 
 ---
 
 ## 💌 Author
-👨‍💻 **Your Name**  
+👨‍💻 **RIM AALOI**  
 💌 Contact: [GitHub Profile](https://github.com/YourProfile) | [LinkedIn](https://www.linkedin.com/in/YourProfile/)  
 
 ---
@@ -58,7 +66,3 @@ Here are some screenshots of the exercises:
 
 🔹 Feel free to explore and modify the code to better understand how it works.
 
----
-
-## 📄 License
-This project is licensed under the **MIT License**. For more details, see the [LICENSE](LICENSE) file.
