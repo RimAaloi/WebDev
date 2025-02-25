@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice, Permutation, IMC et Calculatrice Scientifique</title>
+    <style>
+        /* Styles pour la calculatrice */
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .calculator input {
+            margin: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+        .calculator button {
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #770075;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .calculator button:hover {
+            background-color: #ff70fa;
+        }
+
+        /* Styles pour la permutation */
+        .permutation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .permutation input {
+            margin: 10px;
+            padding: 8px;
+            width: 200px;
+        }
+        .permutation button {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ff00bf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .permutation button:hover {
+            background-color: #ff77e2;
+        }
+
+        /* Styles pour le calculateur d'IMC */
+        .imc-calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .imc-calculator input {
+            margin: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+        .imc-calculator button {
+            margin: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ff76bb;
+            color: black;
+            border: none;
+            border-radius: 5px;
+        }
+        .imc-calculator button:hover {
+            background-color: #ffc7f9;
+        }
+        .imc-result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Styles pour la calculatrice scientifique */
+        .scientific-calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .scientific-calculator input {
+            grid-column: span 4;
+            padding: 10px;
+            font-size: 18px;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .scientific-calculator button {
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #c1004d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .scientific-calculator button:hover {
+            background-color: #ff74a9;
+        }
+        .scientific-calculator button.operator {
+            background-color: #ffc107;
+            color: black;
+        }
+        .scientific-calculator button.operator:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section Permutation -->
+    <div class="permutation">
+        <h2>Permutation</h2>
+        <input type="text" id="text1" placeholder="Entrez la première valeur">
+        <input type="text" id="text2" placeholder="Entrez la deuxième valeur">
+        <button onclick="permuter()">Permuter</button>
+    </div>
+
+    <!-- Section Calculatrice -->
+    <div class="calculator">
+        <h2>Calculatrice Simple</h2>
+        <input type="number" id="num1" placeholder="Nombre 1">
+        <input type="number" id="num2" placeholder="Nombre 2">
+        <input type="number" id="result" placeholder="Résultat" disabled>
+        <div>
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+        </div>
+    </div>
+
+   
+
+    <!-- Section Calculateur d'IMC -->
+    <div class="imc-calculator">
+        <h2>Calculateur d'IMC</h2>
+        <input type="number" id="weight" placeholder="Poids (kg)">
+        <input type="number" id="height" placeholder="Taille (m)">
+        <button onclick="calculateIMC()">Calculer IMC</button>
+        <div class="imc-result" id="imcResult"></div>
+    </div>
+
+    <!-- Section Calculatrice Scientifique -->
+    <div class="scientific-calculator">
+        <h2 style="grid-column: span 4; text-align: center;">Calculatrice Scientifique</h2>
+        <input type="text" id="sci-result" disabled>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="appendToDisplay('(')">(</button>
+        <button onclick="appendToDisplay(')')">)</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculateScientific()">=</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('Math.sqrt(')">√</button>
+        <button onclick="appendToDisplay('Math.sin(')">sin</button>
+        <button onclick="appendToDisplay('Math.cos(')">cos</button>
+        <button onclick="appendToDisplay('Math.tan(')">tan</button>
+        <button onclick="appendToDisplay('Math.log(')">log</button>
+        <button onclick="appendToDisplay('Math.PI')">π</button>
+        <button onclick="appendToDisplay('Math.pow(')">^</button>
+    </div>
+
+    <script>
+        
+        // Fonction pour la permutation
+        function permuter() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            document.getElementById("text1").value = text2;
+            document.getElementById("text2").value = text1;
+        }
+
+        // Fonction pour la calculatrice
+        function calculate(operator) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = 'Operation invalide'; 
+            }
+
+            document.getElementById('result').value = result;
+        }
+
+
+        // Fonction pour calculer l'IMC
+        function calculateIMC() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            if (isNaN(weight) || isNaN(height) || height <= 0) {
+                document.getElementById('imcResult').innerText = "Veuillez entrer des valeurs valides.";
+                return;
+            }
+
+            const imc = (weight / (height * height)).toFixed(2);
+            let interpretation = '';
+
+            if (imc < 18.5) {
+                interpretation = 'Insuffisance pondérale (maigreur)';
+            } else if (imc >= 18.5 && imc < 25) {
+                interpretation = 'Corpulence normale';
+            } else if (imc >= 25 && imc < 30) {
+                interpretation = 'Surpoids';
+            } else if (imc >= 30 && imc < 35) {
+                interpretation = 'Obésité modérée';
+            } else if (imc >= 35 && imc < 40) {
+                interpretation = 'Obésité sévère';
+            } else {
+                interpretation = 'Obésité morbide ou massive';
+            }
+
+            document.getElementById('imcResult').innerText = `Votre IMC est de ${imc}. Vous êtes en état de ${interpretation}.`;
+        }
+
+        // Fonctions pour la calculatrice scientifique
+        function appendToDisplay(value) {
+            document.getElementById('sci-result').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('sci-result').value = '';
+        }
+
+        function deleteLast() {
+            let currentValue = document.getElementById('sci-result').value;
+            document.getElementById('sci-result').value = currentValue.slice(0, -1);
+        }
+
+        function calculateScientific() {
+            let expression = document.getElementById('sci-result').value;
+            try {
+                let result = eval(expression);
+                document.getElementById('sci-result').value = result;
+            } catch (e) {
+                document.getElementById('sci-result').value = 'Erreur';
+            }
+        }
+    </script>
+
+</body>
+</html>
