@@ -29,21 +29,34 @@ This project is a web-based application that includes four interactive tools: a 
 
 ## 📸 Screenshots
 
-### 🖼️ **Simple Calculator**
-![Simple Calculator](screenshots/calculator.png)  
-*Basic arithmetic operations.*
-
 ### 🖼️ **Value Swapper**
-![Value Swapper](screenshots/swapper.png)  
 *Swaps values between two input fields.*
 
+![Value Swapper](screenshots/ex1.png)  
+![Value Swapper](screenshots/ex1%20(2).png) 
+
+
+
+### 🖼️ **Simple Calculator**
+*Basic arithmetic operations.*
+
+![Simple Calculator](screenshots/ex2%20(1).png)
+![Simple Calculator](screenshots/ex2%20(2).png)  
+
+
+
 ### 🖼️ **BMI Calculator**
-![BMI Calculator](screenshots/bmi.png)  
 *Calculates BMI and provides health interpretation.*
 
+![BMI Calculator](screenshots/ex3.png)  
+
 ### 🖼️ **Scientific Calculator**
-![Scientific Calculator](screenshots/scientific.png)  
 *Supports advanced mathematical functions.*
+
+![Scientific Calculator](screenshots/ex4%20(1).png)  
+![Scientific Calculator](screenshots/ex4%20(2).png)  
+
+
 
 ---
 ## 🛠️ How to Use
