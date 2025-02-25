@@ -9,20 +9,23 @@
     <script>
         // Exercice 1 : Conversion de températures
         (function exercice1() {
-            const tempF = parseFloat(prompt("Une température en Fahrenheit :"));
-            const tempC = (5 / 9) * (tempF - 32);
-            alert(`Cette température équivaut à ${tempC.toFixed(1)} degrés Celsius`);
+            const tempf = parseFloat(prompt("Une température en Fahrenheit :"));
+            const tempc = (5 / 9) * (tempf - 32);
+            alert(`Cette température équivaut à ${tempc} degrés Celsius`);
         })();
 
         // Exercice 2 : Conversion de durées
-        (function exercice2() {
-            const secondes = parseInt(prompt("Donnez une durée en secondes :"));
-            const jours = Math.floor(secondes / 86400);
-            const heures = Math.floor((secondes % 86400) / 3600);
-            const minutes = Math.floor((secondes % 3600) / 60);
-            const sec = secondes % 60;
-            alert(`Cette durée équivaut à ${jours} jours ${heures} heures ${minutes} minutes ${sec} secondes`);
-        })();
+    
+        function exercice2() {
+         const secondes = parseInt(prompt("Donnez une durée en secondes :"));
+        const jours = (secondes / 86400) | 0;
+        const heures = ((secondes % 86400) / 3600) | 0;
+        const minutes = ((secondes % 3600) / 60) | 0;
+        const sec = secondes % 60;
+        alert(`Cette durée équivaut à ${jours} jours ${heures} heures ${minutes} minutes ${sec} secondes`);
+        }
+
+        exercice2();
 
         // Exercice 3 : Classer 3 nombres
         (function exercice3() {
@@ -33,6 +36,49 @@
             alert(`Les nombres dans l'ordre croissant : ${nombres.join(', ')}`);
         })();
 
+        
+        const a = parseInt(prompt("Donnez nombre 1:"));
+        const becondes = parseInt(prompt("Donnez nombre 2:"));
+        const cecondes = parseInt(prompt("Donnez nombre 3:"));
+
+        (function troisNombres(a, b, c) {
+            let premier, deuxieme, troisieme;
+
+            if (a <= b && a <= c) {
+                 premier = a;
+                if (b <= c) {
+                deuxieme = b;
+                troisieme = c;
+                } else {
+                deuxieme = c;
+                troisieme = b;
+                }
+            } else if (b <= a && b <= c) {
+                premier = b;
+                if (a <= c) {
+                    deuxieme = a;
+                troisieme = c;
+                } else {
+                deuxieme = c;
+                troisieme = a;
+            }
+            } else {
+                premier = c;
+            if (a <= b) {
+                deuxieme = a;
+                troisieme = b;
+            } else {
+                deuxieme = b;
+                troisieme = a;
+            }
+            }
+
+           
+            alert(`Les nombres dans l'ordre croissant : ${premier}  ${deuxieme} ${troisieme} `);
+        })();
+
+
+
         // Exercice 4 : Affichage de motifs - escaliers
         (function exercice4() {
             const taille = parseInt(prompt("Un motif de taille = "));
@@ -41,6 +87,7 @@
             function triangle1(taille) {
                 let i = 1;
                 let result = "";
+
                 while (i <= taille) {
                     result += "*".repeat(i) + "\n";
                     i++;
@@ -48,24 +95,6 @@
                 return result;
             }
             
-            (function exercice4Bis() {
-    const taille = parseInt(prompt("Donnez la taille de la pyramide :"));
-
-    function pyramide(taille) {
-        let result = "";
-        for (let i = 1; i <= taille; i++) {
-            // Ajouter des espaces pour centrer la pyramide
-            result += " ".repeat(taille - i);
-            // Ajouter les étoiles
-            result += "*".repeat(2 * i - 1);
-            // Passer à la ligne suivante
-            result += "\n";
-        }
-        return result;
-    }
-
-    alert("Affichage de la pyramide :\n" + pyramide(taille));
-})();
 
             // Fonction avec for
             function triangle2(taille) {
@@ -80,7 +109,23 @@
             alert("Affichage par for :\n" + triangle2(taille));
         })();
 
-        // Exercice 5 : Tester si un nombre est premier
+        (function exercice4Bis() {
+            const taille = parseInt(prompt("Donnez la taille de la pyramide :"));
+
+            function pyramide(taille) {
+                let result = "";
+                for (let i = 1; i <= taille; i++) {
+                    result += " ".repeat(taille - i);
+                    result += "*".repeat(2 * i - 1);
+                    result += "\n";
+                }
+                return result;
+            }
+
+            alert("Affichage de la pyramide :\n" + pyramide(taille));
+        })();
+
+        // Exercice 5 
         (function exercice5() {
             const nombre = parseInt(prompt("Un entier positif :"));
 
